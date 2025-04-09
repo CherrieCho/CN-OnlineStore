@@ -9,7 +9,7 @@ const ProductAll = () => {
 
   //데이터 호출함수
   const getProducts = async () => {
-    let url = `http://localhost:5000/products`;
+    let url = `https://my-json-server.typicode.com/CherrieCho/CN-OnlineStore`;
     const response = await fetch(url);
     const data = await response.json();
     setProductList(data);
