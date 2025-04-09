@@ -1,0 +1,144 @@
+{
+  "products":[
+      {
+          "id":0,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240425/379ae626af57631e086c29e74f701e3b.jpg",
+          "title":"터키 디너패티 14oz(397g)",
+          "price":64000,
+          "choice":true,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":1,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240425/870fb9e18b1c6ed4b0eb1320d044cb70.jpg",
+          "title":"살몬&코드 밀믹서 8oz(226g)",
+          "price":44000,
+          "choice":true,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":2,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240425/2e1974e649d5f610498e09a293fc1ff7.jpg",
+          "title":"포크 디너패티 14oz(397g)",
+          "price":65000,
+          "choice":false,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":3,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240425/f72d2085872ba6154b625ca1dc3ae2ea.jpg",
+          "title":"터키 밀믹서 8oz(226g)",
+          "price":44000,
+          "choice":false,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":4,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240425/860c7e56186f5566bc8a2887395fc720.jpg",
+          "title":"로우 코티드 키블 - 와일드 코트 화이트피쉬 10kg",
+          "price":185000,
+          "choice":true,
+          "new":false,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":5,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240425/fea764368c31d3d4352e422b4975ee8f.jpg",
+          "title":"퍼피 로우 코티드 키블 - 케이지 프리 치킨 1.6kg",
+          "price":50000,
+          "choice":false,
+          "new":false,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":6,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240425/8111151a0ee11e789396a4a6e53d7064.jpg",
+          "title":"로우 블렌드 와일드 코트 레시피 1.6kg",
+          "price":52000,
+          "choice":true,
+          "new":false,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":7,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/202406/b8b9b10cc76870a1e55e069a77ec05f7.jpg",
+          "title":"케이지 프리 치킨 와일드 위니 3.25oz(92g)",
+          "price":22000,
+          "choice":false,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":8,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240425/fedb719480883d15e98bd6bc66316a8f.jpg",
+          "title":"케이지 프리 터키 스튜 311g",
+          "price":9500,
+          "choice":true,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+        "id":9,
+        "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240425/30126b4cbb18c55ef35ec177d29f5829.jpg",
+        "title":"케이지 프리 치킨 스튜 311g",
+        "price":9500,
+        "choice":true,
+        "new":true,
+        "size":["S","M","L"]
+
+    },
+      {
+          "id":10,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240426/aad0fdf924cd0a6f2c72339328d5e346.jpg",
+          "title":"디너패티 미니팩 4개 (치킨,터키,포크,치킨&살몬)",
+          "price":12000,
+          "choice":false,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":11,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240425/e3838790f0224abb4f0f64b2279021bb.jpg",
+          "title":"케이지 프리 스튜 3종 (치킨+터키+메들리)",
+          "price":28500,
+          "choice":true,
+          "new":false,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":12,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240426/0638d3599a772196b850b88e32471c82.jpg",
+          "title":"스텔라앤츄이스 펫보울",
+          "price":35000,
+          "choice":true,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":13,
+          "img":"https://stellaandchewys-korea.co.kr/web/product/medium/20240425/736a8ee1a90f407f52706d31b07a2351.jpg",
+          "title":"스텔라앤츄이스 현관문 도어사인",
+          "price":4500,
+          "choice":true,
+          "new":true,
+          "size":["S","M","L"]
+
+      }
+  ]
+}
