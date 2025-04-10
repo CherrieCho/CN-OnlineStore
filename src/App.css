@@ -294,7 +294,11 @@
   }
 
   .search-box{
-    max-width: auto;
+    width: 220px;
+  }
+
+  .search-box input{
+    width: 220px;
   }
 
   .detail-box{
