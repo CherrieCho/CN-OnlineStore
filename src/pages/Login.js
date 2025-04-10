@@ -12,26 +12,26 @@ const Login = ({ auth, setAuth }) => {
     navigate("/");
   };
   return (
-    <Container>
-      <Form onSubmit={(event) => loginUser(event)}>
+    <Container className="login-container">
+      <h1 className="login-title">Login</h1>
+      <Form className="login-form" onSubmit={(event) => loginUser(event)}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
+          <Form.Label>이메일</Form.Label>
+          <Form.Control type="email" placeholder="예: stella@chewys.com" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Label>비밀번호</Form.Label>
+          <Form.Control type="password" placeholder="6자리 이상의 비밀번호" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
+          <Form.Check type="checkbox" label="아이디 저장" />
         </Form.Group>
-        <Button variant="dark" type="submit">
-          로그인
-        </Button>
+        <div className="d-grid">
+          <Button variant="dark" type="submit">
+            로그인
+          </Button>
+        </div>
       </Form>
     </Container>
   );

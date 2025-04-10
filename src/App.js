@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar auth={auth} setAuth={setAuth} />
       <Routes>
         <Route path="/" element={<ProductAll />} />
         <Route

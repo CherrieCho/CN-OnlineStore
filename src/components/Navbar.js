@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
+import { Link, useNavigate } from "react-router-dom";
+import SideNav from "../components/SideNav";
 
-const Navbar = () => {
+const Navbar = ({ auth, setAuth }) => {
+  //사이드메뉴 오픈
+  const [isSidenavOpen, setIsSidenavOpen] = useState(false);
   const menuList = [
     "BRAND",
     "BEST",
@@ -20,26 +23,62 @@ const Navbar = () => {
   //로그인버튼 클릭하면 로그인페이지로
   const navigate = useNavigate();
   const goToLogin = () => {
-    navigate("/login");
+    if (auth === true) {
+      alert("로그아웃 되었습니다");
+      navigate("/");
+      setAuth(false);
+    } else {
+      navigate("/login");
+    }
   };
+
+  //검색
+  const search = (event) => {
+    if (event.key === "Enter") {
+      //입력한 검색어 기반으로 url 변경
+      const keyword = event.target.value;
+      navigate(`/?q=${keyword}`);
+    }
+  };
+
   return (
     <div>
+      {/* 햄버거 메뉴 */}
+      <SideNav
+        isOpen={isSidenavOpen}
+        onClose={() => setIsSidenavOpen(false)}
+        menuList={menuList}
+      />
       <div className="nav-container">
         <div className="search-login">
+          <div
+            className="hamburger-icon"
+            onClick={() => setIsSidenavOpen(true)}
+          >
+            <FontAwesomeIcon icon={faBars} />
+          </div>
           <div className="search-box">
             <FontAwesomeIcon icon={faSearch} />
-            <input type="text" placeholder="검색어를 입력해주세요" />
+            <input
+              type="text"
+              onKeyDown={(event) => search(event)}
+              placeholder="검색어를 입력해주세요"
+            />
           </div>
           <div className="login-button" onClick={goToLogin}>
-            <FontAwesomeIcon icon={faUser} />
-            <div>로그인</div>
+            <FontAwesomeIcon icon={faUser} size="xl" />
+            <div className="is-login">
+              {auth === true ? "로그아웃" : "로그인"}
+            </div>
           </div>
         </div>
         <div className="nav-logo">
-          <img
-            width={210}
-            src="https://dev-wedc.pantheonsite.io/wp-content/uploads/2020/09/Stella-and-Chewys-Logo-scaled.jpg"
-          />
+          <Link to="/">
+            <img
+              width={210}
+              src="https://dev-wedc.pantheonsite.io/wp-content/uploads/2020/09/Stella-and-Chewys-Logo-scaled.jpg"
+            />
+          </Link>
         </div>
         <div className="menu-area">
           <ul className="menu-list">
@@ -49,6 +88,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+      <div className="underline"></div>
     </div>
   );
 };
