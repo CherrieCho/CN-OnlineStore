@@ -8,6 +8,8 @@ import SideNav from "../components/SideNav";
 const Navbar = ({ auth, setAuth }) => {
   //사이드메뉴 오픈
   const [isSidenavOpen, setIsSidenavOpen] = useState(false);
+  //form에서 검색 키워드 인식
+  const [query, setQuery] = useState("");
   const menuList = [
     "BRAND",
     "BEST",
@@ -33,12 +35,16 @@ const Navbar = ({ auth, setAuth }) => {
   };
 
   //검색
-  const search = (event) => {
-    if (event.key === "Enter") {
-      //입력한 검색어 기반으로 url 변경
-      const keyword = event.target.value;
-      navigate(`/?q=${keyword}`);
-    }
+  const search = (keyword) => {
+    //입력한 검색어 기반으로 url 변경
+    navigate(`/?q=${keyword}`);
+  };
+
+  //form 제출
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    search(query);
+    setIsSidenavOpen(false);
   };
 
   return (
@@ -47,7 +53,11 @@ const Navbar = ({ auth, setAuth }) => {
       <SideNav
         isOpen={isSidenavOpen}
         onClose={() => setIsSidenavOpen(false)}
+        search={search}
         menuList={menuList}
+        query={query}
+        setQuery={setQuery}
+        handleSubmit={handleSubmit}
       />
       <div className="nav-container">
         <div className="search-login">
@@ -57,14 +67,15 @@ const Navbar = ({ auth, setAuth }) => {
           >
             <FontAwesomeIcon icon={faBars} />
           </div>
-          <div className="search-box">
+          <form className="search-box" onSubmit={handleSubmit}>
             <FontAwesomeIcon icon={faSearch} />
             <input
               type="text"
-              onKeyDown={(event) => search(event)}
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
               placeholder="검색어를 입력해주세요"
             />
-          </div>
+          </form>
           <div className="login-button" onClick={goToLogin}>
             <FontAwesomeIcon icon={faUser} size="xl" />
             <div className="is-login">
