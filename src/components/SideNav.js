@@ -22,7 +22,7 @@ const SideNav = ({
             onChange={(e) => setQuery(e.target.value)}
             placeholder="검색어를 입력해주세요"
           />
-          <FontAwesomeIcon icon={faSearch} />
+          <FontAwesomeIcon icon={faSearch} className="search-icon" />
         </form>
       </div>
       {menuList.map((menu, idx) => (

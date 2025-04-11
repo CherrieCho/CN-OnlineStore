@@ -107,6 +107,10 @@
   background: none;
 }
 
+.search-box-mobile .search-icon{
+  width: 10%;
+}
+
 .login-button{
   display: flex;
   gap: 5px;
